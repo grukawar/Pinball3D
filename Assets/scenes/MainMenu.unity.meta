@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/scenes/MainMenu.unity.meta
 guid: 5731be1c8785c4c5b9c0e25e77c27b26
 timeCreated: 1444116521
+=======
+<<<<<<< HEAD
+guid: 2b4c564ae036e49bfa1ff47cc6efd2ed
+timeCreated: 1443520031
+=======
+guid: 9bddc671becfc3f428df8caef481fb7f
+timeCreated: 1443517910
+>>>>>>> LevelDesign
+>>>>>>> master:Pinball3D/Assets/test.txt.meta
 licenseType: Free
 DefaultImporter:
   userData: 
