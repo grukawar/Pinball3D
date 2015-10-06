@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2b4c564ae036e49bfa1ff47cc6efd2ed
 timeCreated: 1443520031
+=======
+guid: 9bddc671becfc3f428df8caef481fb7f
+timeCreated: 1443517910
+>>>>>>> LevelDesign
 licenseType: Free
 TextScriptImporter:
   userData: 
