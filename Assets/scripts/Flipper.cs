@@ -3,14 +3,35 @@ using System.Collections;
 
 public class Flipper : MonoBehaviour {
 
-    public 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+    HingeJoint hinge;
+    JointSpring hingeSpring;
+
+    // Use this for initialization
+    void Start () {
+        hinge = GetComponent<HingeJoint>();
+        hingeSpring = hinge.spring;
+    }
+
+    //Powers the flippers;
+    public void flipperOn ()
+    {
+        hingeSpring.targetPosition = -45;
+        hinge.spring = hingeSpring;
+    }
+    //Depowers the flippers;
+    public void flipperOff()
+    {
+        hingeSpring.targetPosition = 0;
+        hinge.spring = hingeSpring;
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        if (Input.GetKey(KeyCode.A))
+            flipperOn();
+        else
+            flipperOff();
+
 	}
 }
