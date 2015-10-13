@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Flipper : Score {
+public class Flipper : MonoBehaviour {
 
     HingeJoint hinge;
     JointSpring hingeSpring;
+
+	public AudioClip FlipperUp4;
 
     // Use this for initialization
     void Start () {
@@ -30,7 +32,6 @@ public class Flipper : Score {
 
         if (Input.GetKey (KeyCode.Space)) {
 			flipperOn ();
-			score = score + 100;
 		}
 		else {
 			flipperOff ();
