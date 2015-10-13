@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d58309b2799b58c41a16f19a2a7ab3ad
-timeCreated: 1444123889
+guid: 98f183fc7a33a3d499cc7edd17d0d17b
+timeCreated: 1444634747
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCylinder1
+    4300000: HousePinball
     9500000: //RootNode
   materials:
     importMaterials: 1
