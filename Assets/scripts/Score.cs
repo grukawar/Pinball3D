@@ -9,9 +9,9 @@ public class Score : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			score = score + 100;
-		}
+		//if (Input.GetKeyDown(KeyCode.Space)) {
+		//	score = score + 100;
+		//}
 		SetCountText ();
 	}
 

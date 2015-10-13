@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Flipper : MonoBehaviour {
+public class Flipper : Score {
 
     HingeJoint hinge;
     JointSpring hingeSpring;
@@ -28,10 +28,13 @@ public class Flipper : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKey(KeyCode.A))
-            flipperOn();
-        else
-            flipperOff();
+        if (Input.GetKey (KeyCode.Space)) {
+			flipperOn ();
+			score = score + 100;
+		}
+		else {
+			flipperOff ();
+		}
 
 	}
 }
