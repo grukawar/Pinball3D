@@ -3,13 +3,16 @@ using System.Collections;
 
 public class Bouncer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public float bounce = 5;
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.transform.tag);
+        if (collision.transform.tag == "Player")
+        {
+            Debug.Log(collision.transform.position);
+            collision.gameObject.GetComponent<Rigidbody>().velocity = (collision.transform.transform.position - transform.position) * bounce;
+        }
+
+    }
 }
