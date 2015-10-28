@@ -24,4 +24,3 @@ public class LeaderBoard : MonoBehaviour {
 		scoreDisplay.text = "Score: " + score;
 	}
 }
-
