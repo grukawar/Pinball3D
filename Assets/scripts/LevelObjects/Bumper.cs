@@ -4,7 +4,7 @@ using System.Collections;
 public class Bumper : MonoBehaviour
 {
     public GameObject poof;
-    public Collider force;
+    public GameObject Flash;
 
     void OnCollisionEnter(Collision coll)
     {
@@ -18,7 +18,8 @@ public class Bumper : MonoBehaviour
 
 
             Instantiate(poof, transform.position, Quaternion.identity);
-            
+            Instantiate(Flash, transform.position, Quaternion.identity);
+
         }
     }
 
