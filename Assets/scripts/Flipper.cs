@@ -6,6 +6,8 @@ public class Flipper : MonoBehaviour {
     HingeJoint hinge;
     JointSpring hingeSpring;
 
+	public AudioClip FlipperUp4;
+
     // Use this for initialization
     void Start () {
         hinge = GetComponent<HingeJoint>();
@@ -28,10 +30,12 @@ public class Flipper : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKey(KeyCode.A))
-            flipperOn();
-        else
-            flipperOff();
+        if (Input.GetKey (KeyCode.Space)) {
+			flipperOn ();
+		}
+		else {
+			flipperOff ();
+		}
 
 	}
 }
