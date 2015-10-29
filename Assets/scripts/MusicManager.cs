@@ -10,10 +10,6 @@ public class MusicManager : MonoBehaviour {
 		source = GetComponent<AudioSource> ();
 	}
 
-	void Start(){
-		//PrintListInfo ();
-	}
-
 	public void PlayAudio(int audioID, float audioVol){
 
 		source.PlayOneShot (myList [audioID], audioVol);

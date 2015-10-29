@@ -24,14 +24,6 @@ public class LauncherTest : MonoBehaviour
 
             rb.AddForce(movement * speed);
 
-
-
         }
     }
-
-    void OnCollisionExit(Collision Coll)
-    {
-        
-    }
-
 }

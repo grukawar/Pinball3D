@@ -22,5 +22,6 @@ public class LeaderBoard : MonoBehaviour {
 	
 	private void updateScore() {
 		scoreDisplay.text = "Score: " + score;
+
 	}
 }
