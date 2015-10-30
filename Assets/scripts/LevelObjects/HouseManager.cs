@@ -3,9 +3,10 @@ using System.Collections;
 
 public class HouseManager : MonoBehaviour
 {
-
+    public GameObject ball;
     public GameObject ParticleEffect;
     public GameObject Flash;
+    public bool spawned = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,19 +18,20 @@ public class HouseManager : MonoBehaviour
 	
 	}
 
-    void OnCollisionEnter(Collision coll)
+    void OnTriggerExit(Collider other)
     {
-        if (coll.gameObject.name == "ball")
+        if (other.gameObject.tag == "Player")
         {
-           // Vector3 scale = transform.localScale;
-           // scale.y = 250F; // your new value
-            //scale.x = 250F;
-           // scale.z = 250F;
-            //transform.localScale = scale;
 
-
-            //Instantiate(poof, transform.position, Quaternion.identity);
-            //Instantiate(Flash, transform.position, Quaternion.identity);
+            if (spawned == false)
+            {
+                Instantiate(ball, transform.position, Quaternion.identity);
+                spawned = true;
+                Instantiate(Flash, transform.position, Quaternion.identity);
+            }
+            
+            Instantiate(ParticleEffect, transform.position, Quaternion.identity);
+           
 
         }
     }

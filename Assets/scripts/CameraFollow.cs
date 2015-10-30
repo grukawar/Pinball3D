@@ -14,8 +14,15 @@ public class CameraFollow : MonoBehaviour {
 
 	void Start () {
         target = GameObject.FindGameObjectWithTag("Player");
+<<<<<<< HEAD
 	}
 
+=======
+        RenderSettings.ambientLight = Color.black;
+    }
+	
+	// Update is called once per frame
+>>>>>>> refs/remotes/origin/LevelDesign
 	void Update () {
         if (target)
         {

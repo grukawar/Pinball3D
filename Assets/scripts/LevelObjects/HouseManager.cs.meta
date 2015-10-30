@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 0b3dde109f37a9d438883ffeafcb9f69
-timeCreated: 1445849580
+timeCreated: 1446200996
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ball: {instanceID: 0}
+  - ParticleEffect: {instanceID: 0}
+  - Flash: {fileID: 136354, guid: 010ab0c0078d65d4d8a2ab32704564ad, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
