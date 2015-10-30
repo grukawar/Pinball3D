@@ -6,7 +6,7 @@ public class HouseManager : MonoBehaviour
     public GameObject ball;
     public GameObject ParticleEffect;
     public GameObject Flash;
-    public bool spawned = false;
+    float cooldown = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -15,23 +15,23 @@ public class HouseManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+        cooldown -= Time.deltaTime;
+    }
 
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
 
-            if (spawned == false)
+            if (cooldown <= 0)
             {
                 Instantiate(ball, transform.position, Quaternion.identity);
-                spawned = true;
+                cooldown = 10;
                 Instantiate(Flash, transform.position, Quaternion.identity);
             }
             
             Instantiate(ParticleEffect, transform.position, Quaternion.identity);
-           
 
         }
     }

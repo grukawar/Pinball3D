@@ -5,6 +5,8 @@ public class CameraFollow : MonoBehaviour {
 
     public GameObject target;
     public Vector3 offset = new Vector3(0, 0, 0);
+    public Vector3 middlePoint = new Vector3(0, 0, 0);
+    GameObject[] pinballs;
 
     public void changeTarget (GameObject newTarget, Vector3 newOffset)
     {
@@ -13,22 +15,28 @@ public class CameraFollow : MonoBehaviour {
     }
 
 	void Start () {
-        target = GameObject.FindGameObjectWithTag("Player");
-<<<<<<< HEAD
 	}
 
-=======
-        RenderSettings.ambientLight = Color.black;
-    }
-	
-	// Update is called once per frame
->>>>>>> refs/remotes/origin/LevelDesign
 	void Update () {
         if (target)
         {
-            transform.localPosition -= (transform.localPosition - target.transform.localPosition) / 10 - offset;
-
-            transform.LookAt(target.transform.position);
+            middlePoint = target.transform.localPosition;
         }
-	}
+        else
+        {
+            middlePoint = new Vector3(0, 0, 0);
+            pinballs = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (GameObject ball in pinballs)
+            {
+                middlePoint += ball.transform.position;
+            }
+
+            middlePoint = middlePoint / pinballs.Length;
+        }
+
+        transform.localPosition -= (transform.localPosition - middlePoint) / 10 - offset;
+
+        //transform.LookAt(middlePoint);
+    }
 }

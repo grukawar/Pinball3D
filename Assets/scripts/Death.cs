@@ -11,16 +11,11 @@ public class Death : Levens {
 	
 	void OnCollisionEnter(Collision collision)
 	{
-<<<<<<< HEAD
 		Debug.Log(collision.transform.tag);
-		if (collision.transform.tag == "Death"){
-=======
-		//Debug.Log(collision.transform.tag);
 		if (collision.transform.tag == "Death")
-		{
->>>>>>> refs/remotes/origin/LevelDesign
-			Destroy(gameObject);
-			pinBall.removeLeven(valueLevens);
-		}
+        {
+            Destroy(gameObject);
+            pinBall.removeLeven(valueLevens);
+        }
 	}
 }
